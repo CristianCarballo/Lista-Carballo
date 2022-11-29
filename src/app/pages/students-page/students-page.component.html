@@ -1,0 +1,9 @@
+<ul class="list-group list-group-flush" *ngFor="let estudiante of estudiantes">
+    <li class="list-group-item"
+    [ngClass]="estudiante.isTop10 ? 'list-group-item list-group-item-success' : 'list-group-item list-group-item-warning'">
+        ID: {{ estudiante.id }} - 
+        NOMBRE: {{ estudiante.nombre }} - 
+        APELLIDO: {{ estudiante.apellido }} - 
+        FECHA DE NACIMIENTO: {{ estudiante.fechaNacimiento | date }} - 
+        ESTA EN EL TOP 10?: {{ estudiante.isTop10 }}</li>
+  </ul>
